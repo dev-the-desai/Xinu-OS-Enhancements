@@ -17,10 +17,9 @@ Added cascading process termination and Unix-like fork system call to Xinu's pro
   - Created Unix-like fork() functionality
   - Proper handling of process stack duplication
   - Implemented return value logic:
-
-Returns child PID to parent
-Returns NPROC to child process
-Returns SYSERR on failure
+    - Returns child PID to parent
+    - Returns NPROC to child process
+    - Returns SYSERR on failure
 
 ## Xinu OS Scheduler Modifications
 Modified the priority-based scheduler in Xinu to implement Lottery Scheduling and Multi-Level Feedback Queue (MLFQ) scheduling algorithms. This project extends Xinu's process management capabilities while maintaining system process scheduling integrity.
