@@ -24,5 +24,21 @@ Added cascading process termination and Unix-like fork system call to Xinu's pro
 ## Xinu OS Scheduler Modifications
 Modified the priority-based scheduler in Xinu to implement Lottery Scheduling and Multi-Level Feedback Queue (MLFQ) scheduling algorithms. This project extends Xinu's process management capabilities while maintaining system process scheduling integrity.
 
+### Key Implementation Features
+
+1. Lottery Scheduler
+
+  - Implemented ticket-based process scheduling
+  - Added dynamic ticket allocation functionality
+  - Maintained system process priority scheduling
+  - Includes fairness analysis capabilities
+
+2. MLFQ Scheduler
+
+  - Implemented multi-queue priority system
+  - Added configurable time allotment and priority boost periods
+  - Implemented priority boost mechanism
+  - Added priority upgrade/downgrade tracking
+
 ## Xinu OS Synchronization Extensions
 Added synchronization locks (spinlocks) to Xinu and implemented advanced locking mechanisms including bounded wait guards, priority inversion avoidance, and deadlock detection. This project enhances Xinu's synchronization capabilities while ensuring system stability and performance.
