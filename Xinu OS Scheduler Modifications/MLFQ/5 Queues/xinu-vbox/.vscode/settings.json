@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "random": "c",
-        "span": "c",
-        "type_traits": "c",
-        "exception": "c",
-        "typeinfo": "c"
-    }
-}
