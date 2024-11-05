@@ -1,0 +1,44 @@
+Part-1: Test and Set
+
+testandset.S    -> added testandset()
+prototypes.h    -> included testandset.S
+
+Part-2: Spinlock
+
+spinlock.c      -> spinlock methods
+lock.h          -> added NSPINLOCKS and struct sl_lock_t
+xinu.h          -> included lock.h
+prototypes.h    -> included spinlock methods
+send.c          -> made recommended change
+
+Part-3: Lock
+
+lock.h          -> added NLOCKS and struct lock_t
+lock.c          -> added lock functinalities
+queue.h         -> updated NQENT
+process.h       -> added runtime and prTopark
+clkinit.c       -> declaration and initialization of ctr1000
+clkhandler.c    -> update ctr1000 and runtime;
+clock.h         -> ctr1000 declaration
+create.c        -> updated new PCB params
+prototypes.h    -> included lock methods
+
+Part-4: ActiveLock
+
+lock.h          -> added NALOCKS and struct al_lock_t
+active_lock.c   -> added al_lock functinalities
+process.h       -> added prLockWaitOn
+queue.h         -> updated NQENT
+prototypes.h    -> included active_lock methods
+
+Part-5: Test case for active_lock
+
+main-deadlock.c -> added testcases
+
+Part-6: PiLock
+
+lock.h          -> added NPILOCKS and struct pi_lock_t and 2 vectors for tracking
+pi_lock.c       -> added pi_lock functinalities
+process.h       -> added prOldPrio to store all the new priorities
+create.c        -> updated new PCB params
+prototypes.h    -> included pi_lock methods

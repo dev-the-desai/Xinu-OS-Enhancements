@@ -1,0 +1,32 @@
+CT1:    ready.c         -> added the syscall print_ready_list()
+        main.c          -> added testcases
+
+CT2:    process.h       -> added runtime, turnaroundtime and num_ctxsw params
+        clkinit.c       -> initialized ctr1000
+        clock.h         -> added ctr1000 for global usage
+        clkhandler.c    -> increments ctr1000 every ms
+                        -> increment runtime for currpid
+        resched.c       -> initialized runtime and turnaroundtime after ctxsw for ptnew
+                        -> increment num_ctxsw
+        kill.c          -> end turnaroundtime here
+
+CT3     create.c        -> added create_user_process function
+
+CT4     resched.c       -> added DEBUG_CTXSW directive
+
+CT5     create.c        -> added burst_execution function
+
+MLFQ
+
+process.h       -> added user_process, queue_time, upgrades and downgrades params
+create.c        -> updated with new params
+
+resched.h       -> defined UPRIORITY_QUEUES, TIME_ALLOTMENT and PRIORITY_BOOST_PERIOD
+
+kernel.h        -> added 3 new qids for MLFQ and declared syscall
+NOT ready.c         -> instantiated 3 qids and updated inserting logic
+initialize.c    -> initialized newqueue for 3 queues
+queue.h         -> updated NQENT for accomodating 3 queues
+                
+NOT resched.c   -> added reset_timing()
+                -> updated to support MLFQ

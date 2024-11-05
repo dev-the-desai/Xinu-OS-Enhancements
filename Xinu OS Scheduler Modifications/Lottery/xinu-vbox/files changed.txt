@@ -1,0 +1,32 @@
+CT1:    ready.c         -> added the syscall print_ready_list()
+        main.c          -> added testcases
+
+CT2:    process.h       -> added runtime, turnaroundtime and num_ctxsw params
+        clkinit.c       -> initialized ctr1000
+        clock.h         -> added ctr1000 for global usage
+        clkhandler.c    -> increments ctr1000 every ms
+                        -> increment runtime for currpid
+        resched.c       -> initialized runtime and turnaroundtime after ctxsw for ptnew
+                        -> increment num_ctxsw
+        kill.c          -> end turnaroundtime here
+
+CT3     create.c        -> added create_user_process function
+
+CT4     resched.c       -> added DEBUG_CTXSW directive
+
+CT5     create.c        -> added burst_execution function
+
+Lottery Scheduling:
+
+process.h       -> added user_process flag and tickets
+create.c        -> initialized user_process flag and tickets for create and create_user_process
+kernel.h        -> added new qid userprocesslist for user processes and made QUANTUM = 10
+initialize.c    -> initialized newqueue for userprocesslist
+queue.h         -> updated NQENT for accomodating userprocesslist and defined syscall print_ready_list()
+
+insert.c        -> added insert_to_user()
+ready.c         -> instantiated userprocesslist and updated insert logic
+
+resched.c       -> modified to support lottery scheduling
+
+prototypes.h    -> all function declaration
