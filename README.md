@@ -1,5 +1,6 @@
 # Xinu-OS-Enhancements
-A collection of system-level enhancements to the Xinu operating system, focusing on core OS functionality including process management, scheduling, and synchronization. Consists of three projects: process management extensions implementing fork and cascading termination, scheduling modifications adding lottery and MLFQ algorithms, and synchronization enhancements incorporating spinlocks with deadlock detection and priority inheritance.
+A collection of system-level enhancements to the Xinu operating system, focusing on core OS functionality including process management, scheduling, and synchronization. 
+Consists of three projects: process management extensions implementing fork and cascading termination, scheduling modifications adding lottery and MLFQ algorithms, and synchronization enhancements incorporating different types of locks with deadlock detection and priority inheritance.
 
 ## Xinu OS Process Management Enhancements
 Added cascading process termination and Unix-like fork system call to Xinu's process management system. Implemented process stack duplication with distinct parent-child execution paths while preserving memory address space sharing. This project enhances Xinu's process creation and termination capabilities while maintaining system process integrity.
